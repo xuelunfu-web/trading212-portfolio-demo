@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading 212 - Portfolio</title>
+    <link rel="stylesheet" href="portfolio-styles.css">
+</head>
+<body>
+    <div class="mobile-container">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="time">9:41</div>
+            <div class="status-icons">
+                <img src="https://www.figma.com/api/mcp/asset/5aa26ad1-b4d2-4a67-b27d-3d31f1f60108" alt="signal" class="icon-signal">
+                <img src="https://www.figma.com/api/mcp/asset/2f582c8b-b478-482d-82cc-e83cfda2cbe3" alt="wifi" class="icon-wifi">
+                <img src="https://www.figma.com/api/mcp/asset/a2d386aa-4047-4e5f-bc2d-c62dad1430e9" alt="battery" class="icon-battery">
+            </div>
+        </div>
+
+        <!-- Header Section -->
+        <div class="header">
+            <div class="account-info">
+                <div class="avatar"></div>
+                <div class="account-details">
+                    <div class="account-name">
+                        <span>Stock ISA</span>
+                        <img src="https://www.figma.com/api/mcp/asset/597df491-ca39-4d83-8c88-dbb1285cf551" alt="dropdown" class="dropdown-icon">
+                    </div>
+                    <div class="account-change">
+                        <img src="https://www.figma.com/api/mcp/asset/41b83a0f-7b3d-4df6-9e93-63c09e631998" alt="up arrow" class="change-icon">
+                        <span class="change-text">+2,02 (0,90%) Today</span>
+                    </div>
+                </div>
+            </div>
+            <div class="balance">
+                <span class="balance-amount">$ 867.22</span>
+                <img src="https://www.figma.com/api/mcp/asset/bdab598d-c962-4266-9c70-9d886e541ad7" alt="profile" class="profile-icon">
+            </div>
+        </div>
+
+        <!-- Solar System Visualization -->
+        <div class="solar-system-container">
+            <div class="starfield">
+                <img src="https://www.figma.com/api/mcp/asset/4c6b98bd-0ad8-48f1-ae7d-e01b417e8ccd" alt="stars" class="stars-bg">
+            </div>
+
+            <!-- Portfolio Labels -->
+            <div class="portfolio-label" style="top: 78px; left: 27px;">Tech 45%</div>
+            <div class="portfolio-label" style="top: 132px; left: 140px;">Others 17%</div>
+            <div class="portfolio-label" style="top: 147px; left: 283px;">Bitcoin 13%</div>
+            <div class="portfolio-label" style="top: 216px; left: 290px;">Healthcare 25%</div>
+
+            <!-- Orbital Rings -->
+            <div class="orbit orbit-1">
+                <img src="https://www.figma.com/api/mcp/asset/0ce61c9e-c50c-43c6-a064-566135e17567" alt="orbit" class="orbit-line">
+            </div>
+            <div class="orbit orbit-2">
+                <img src="https://www.figma.com/api/mcp/asset/45750fbb-6a79-4cb1-b7b2-031bf5f1884c" alt="orbit" class="orbit-line">
+            </div>
+            <div class="orbit orbit-3">
+                <img src="https://www.figma.com/api/mcp/asset/fe4fa9fa-9ce7-4e0a-876f-7f6dfd41807b" alt="orbit" class="orbit-line">
+            </div>
+            <div class="orbit orbit-4">
+                <img src="https://www.figma.com/api/mcp/asset/6c4123cd-ca7d-4680-8489-51f39c7208c7" alt="orbit" class="orbit-line">
+            </div>
+
+            <!-- Center Planet -->
+            <div class="planet-center">
+                <img src="https://www.figma.com/api/mcp/asset/b9bdd149-8bc1-4d31-a3d0-4465956cc10b" alt="planet" class="planet-venus">
+            </div>
+        </div>
+
+        <!-- Score Section -->
+        <div class="score-section">
+            <div class="score-value">78/100</div>
+            <div class="score-description">Healthy, but slightly unbalanced</div>
+        </div>
+
+        <!-- Gradient Spotlight -->
+        <div class="spotlight-effect"></div>
+
+        <!-- Rebalance Button -->
+        <div class="rebalance-button-container">
+            <button class="rebalance-button">
+                <img src="https://www.figma.com/api/mcp/asset/bbf1b83e-4e6d-4109-b7ee-72ce792d8059" alt="icon" class="button-icon">
+                Rebalance portfolio
+            </button>
+        </div>
+
+        <!-- Key Insights Section -->
+        <div class="insights-section">
+            <div class="section-header">
+                <h2>Key insights</h2>
+                <a href="#" class="view-all">View all</a>
+            </div>
+
+            <div class="insights-container">
+                <div class="insights-cards">
+                    <div class="insight-card">
+                        <span class="card-label">Risk level</span>
+                        <div class="card-content">Moderate risk level</div>
+                        <button class="card-close">×</button>
+                        <img src="https://www.figma.com/api/mcp/asset/95ec098a-03ba-4b4b-b1d5-439dc530992c" alt="risk" class="card-bg">
+                    </div>
+
+                    <div class="insight-card">
+                        <span class="card-label">Tech Exposure</span>
+                        <div class="card-content">High exposure to Tech (45%)</div>
+                        <button class="card-close">×</button>
+                    </div>
+
+                    <div class="insight-card">
+                        <span class="card-label">Diversification</span>
+                        <div class="card-content">Limited exposure across regions</div>
+                        <button class="card-close">×</button>
+                    </div>
+                </div>
+
+                <div class="ask-atlas">
+                    <img src="https://www.figma.com/api/mcp/asset/334ce564-3bda-40ed-9d83-18ef51c0e397" alt="search" class="search-icon">
+                    <span>Ask Atlas</span>
+                    <button class="ask-button">
+                        <img src="https://www.figma.com/api/mcp/asset/3f6e825d-f521-4d6d-a89f-a8dbee63c7c6" alt="arrow" class="arrow-icon">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Section -->
+        <div class="portfolio-section">
+            <div class="section-header">
+                <h2>Portfolio</h2>
+                <a href="#" class="view-all">View all</a>
+            </div>
+
+            <div class="portfolio-cards">
+                <div class="portfolio-card">
+                    <div class="card-header">
+                        <img src="https://www.figma.com/api/mcp/asset/790e1681-e24f-4972-8e1f-02e36ae821c1" alt="Apple" class="company-icon">
+                        <div class="company-info">
+                            <div class="company-ticker">APPL</div>
+                            <div class="company-name">Apple Inc.</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stock-price">198.24</div>
+                        <div class="stock-change positive">
+                            <img src="https://www.figma.com/api/mcp/asset/f163efdb-d76c-4472-95ee-8ff5552c42ac" alt="up" class="change-arrow">
+                            <span>2.5%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="card-header">
+                        <img src="https://www.figma.com/api/mcp/asset/b3ea49a1-9e39-46fc-977e-0abf5fbfe0bc" alt="Lyft" class="company-icon">
+                        <div class="company-info">
+                            <div class="company-ticker">LYFT</div>
+                            <div class="company-name">Lyft Inc.</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stock-price">410.01</div>
+                        <div class="stock-change positive">
+                            <img src="https://www.figma.com/api/mcp/asset/f163efdb-d76c-4472-95ee-8ff5552c42ac" alt="up" class="change-arrow">
+                            <span>2.5%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
