@@ -180,7 +180,7 @@ body {
     left: 1px;
     width: 388px;
     height: 231px;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .starfield {
@@ -245,8 +245,8 @@ body {
 /* Central Planet */
 .planet-center {
     position: absolute;
-    top: 136px;
-    left: 99px;
+    top: 23px;
+    left: 101px;
     width: 186px;
     height: 186px;
     z-index: 3;
