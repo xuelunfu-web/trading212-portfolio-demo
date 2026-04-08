@@ -21,6 +21,12 @@ class PortfolioApp {
             this.rebalanceBtn.addEventListener('click', () => this.startRebalanceFlow());
         }
 
+        // Add event listener to Ask Atlas button
+        const askAtlasBtn = document.querySelector('.ask-button');
+        if (askAtlasBtn) {
+            askAtlasBtn.addEventListener('click', () => this.startRebalanceFlow());
+        }
+
         // Add back button functionality
         const backButtons = document.querySelectorAll('.back-button');
         backButtons.forEach(btn => {
