@@ -76,13 +76,15 @@ body {
 
 /* ========== SCREEN 1: Portfolio Tab ========== */
 
-/* Header Section */
+/* Header Section - Exact Figma positioning */
 .header {
+    position: absolute;
+    top: 62px;
+    left: 16px;
+    right: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 16px;
-    position: relative;
     z-index: 10;
 }
 
@@ -97,22 +99,25 @@ body {
     height: 40px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10.806px);
+    box-shadow: inset 12.865px -12.865px 12.865px 0px rgba(194, 194, 194, 0.03),
+                inset -12.865px 12.865px 12.865px 0px rgba(255, 255, 255, 0.03);
 }
 
 .account-details {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 0;
 }
 
 .account-name {
     display: flex;
     align-items: center;
     gap: 4px;
-    font-size: 14px;
+    font-size: 14.219px;
     color: white;
+    line-height: 34.531px;
+    letter-spacing: -0.5078px;
 }
 
 .dropdown-icon {
@@ -123,10 +128,11 @@ body {
 .account-change {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 0;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     color: #14ae5c;
+    line-height: 20px;
 }
 
 .change-icon {
@@ -136,6 +142,7 @@ body {
 
 .change-text {
     font-size: 14px;
+    letter-spacing: 0.1px;
 }
 
 .balance {
@@ -143,15 +150,19 @@ body {
     align-items: center;
     gap: 8px;
     background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10.806px);
     border-radius: 21px;
     padding: 7px 10px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 42px;
+    box-shadow: inset 12.865px -12.865px 12.865px 0px rgba(194, 194, 194, 0.03),
+                inset -12.865px 12.865px 12.865px 0px rgba(255, 255, 255, 0.03);
 }
 
 .balance-amount {
-    font-size: 14px;
+    font-size: 14.219px;
     color: white;
+    letter-spacing: -0.5078px;
+    line-height: 9.648px;
 }
 
 .profile-icon {
@@ -160,28 +171,18 @@ body {
     border-radius: 14px;
 }
 
-/* Solar System Visualization */
+/* Solar System Visualization - Exact Figma measurements */
 .solar-system-container {
-    position: relative;
-    width: 390px;
-    height: 250px;
-    margin-top: -30px;
+    position: absolute;
+    top: 113px;
+    left: 1px;
+    width: 388px;
+    height: 231px;
     overflow: hidden;
 }
 
 .starfield {
-    position: absolute;
-    top: -210px;
-    left: -453px;
-    width: 1292px;
-    height: 727px;
-    pointer-events: none;
-}
-
-.stars-bg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    display: none; /* Using orbital rings instead */
 }
 
 .portfolio-label {
@@ -191,60 +192,11 @@ body {
     z-index: 5;
     white-space: nowrap;
     font-weight: 400;
+    letter-spacing: -0.5078px;
+    line-height: 9.648px;
 }
 
-.orbit-line {
-    display: block;
-}
-
-.orbit-1 {
-    width: 169px;
-    height: 169px;
-}
-
-.orbit-2 {
-    width: 270px;
-    height: 270px;
-}
-
-.orbit-3 {
-    width: 306px;
-    height: 306px;
-}
-
-.orbit-4 {
-    width: 351px;
-    height: 351px;
-}
-
-.planet-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-90deg);
-    width: 186px;
-    height: 186px;
-    z-index: 3;
-    animation: gentleRotate 20s linear infinite;
-}
-
-.planet-venus {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Orbital rotation animation */
-@keyframes gentleRotate {
-    0% {
-        transform: translate(-50%, -50%) rotate(-90deg);
-    }
-    100% {
-        transform: translate(-50%, -50%) rotate(270deg);
-    }
-}
-
-/* Add orbital motion to the orbit rings */
+/* Orbital rings with rotation */
 .orbit {
     position: absolute;
     top: 50%;
@@ -263,13 +215,67 @@ body {
     }
 }
 
-/* Score Section */
+.orbit-line {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.orbit-1 {
+    width: 270px;
+    height: 270px;
+}
+
+.orbit-2 {
+    width: 306px;
+    height: 306px;
+}
+
+.orbit-3 {
+    width: 351px;
+    height: 351px;
+}
+
+.orbit-4 {
+    display: none; /* Only using 3 orbits as in design */
+}
+
+/* Central Planet */
+.planet-center {
+    position: absolute;
+    top: 166px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-90deg);
+    width: 186px;
+    height: 186px;
+    z-index: 3;
+    animation: gentleRotate 20s linear infinite;
+}
+
+.planet-venus {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes gentleRotate {
+    0% {
+        transform: translateX(-50%) rotate(-90deg);
+    }
+    100% {
+        transform: translateX(-50%) rotate(270deg);
+    }
+}
+
+/* Score Section - Exact positioning */
 .score-section {
-    position: relative;
-    z-index: 10;
+    position: absolute;
+    top: 358px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 233px;
     text-align: center;
-    margin-top: -50px;
-    padding: 0 20px;
+    z-index: 10;
 }
 
 .score-value {
@@ -278,6 +284,8 @@ body {
     font-weight: 700;
     color: #f4c22e;
     margin-bottom: 12px;
+    line-height: 21px;
+    letter-spacing: -0.32px;
     transition: color 0.3s ease;
 }
 
@@ -285,14 +293,16 @@ body {
     font-size: 16px;
     color: #eeeff1;
     font-weight: 400;
+    line-height: 21px;
+    letter-spacing: -0.32px;
 }
 
 /* Spotlight Effect */
 .spotlight-effect {
     position: absolute;
-    top: 349px;
+    top: calc(50% + 221.5px);
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     width: 386px;
     height: 589px;
     background: radial-gradient(ellipse at center, rgba(88, 0, 230, 0.6) 0%, transparent 70%);
@@ -301,22 +311,27 @@ body {
     z-index: 1;
 }
 
-/* Rebalance Button */
+/* Rebalance Button - Exact positioning */
 .rebalance-button-container {
-    position: relative;
-    z-index: 10;
+    position: absolute;
+    top: 422px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 388px;
+    height: 56px;
     display: flex;
-    justify-content: center;
-    margin-top: 24px;
-    padding: 0 16px;
+    align-items: center;
+    justify-center;
+    z-index: 10;
 }
 
 .rebalance-button {
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 10px 24px;
-    background: linear-gradient(135deg, #ffe600 0%, #f4d02a 100%);
+    padding: 4px 16px 4px 12px;
+    height: 40px;
+    background: #ffe600;
     border: none;
     border-radius: 999px;
     font-size: 16px;
@@ -325,6 +340,8 @@ body {
     cursor: pointer;
     box-shadow: 2px 2px 4px rgba(28, 29, 33, 0.12), inset -0.4px -0.4px 1.5px rgba(28, 29, 33, 0.3);
     transition: transform 0.2s;
+    line-height: 21px;
+    letter-spacing: -0.32px;
 }
 
 .rebalance-button:hover {
@@ -336,12 +353,13 @@ body {
     height: 23px;
 }
 
-/* Insights Section */
+/* Insights Section - Exact positioning */
 .insights-section {
-    position: relative;
+    position: absolute;
+    top: 498px;
+    left: 16px;
+    right: 16px;
     z-index: 10;
-    padding: 16px;
-    margin-top: 24px;
 }
 
 .section-header {
@@ -355,12 +373,15 @@ body {
     font-size: 16px;
     font-weight: 700;
     color: #fefefe;
+    line-height: 24px;
+    letter-spacing: 0.1px;
 }
 
 .view-all {
     font-size: 14px;
     color: #f5f5f5;
     text-decoration: none;
+    line-height: 20px;
 }
 
 .insights-container {
@@ -398,9 +419,12 @@ body {
 .card-label {
     display: block;
     font-size: 10px;
+    font-weight: 590;
     color: #303030;
     margin-bottom: 4px;
-    font-weight: 400;
+    line-height: 13px;
+    letter-spacing: 0.07px;
+    text-transform: none;
 }
 
 .card-content {
@@ -408,6 +432,7 @@ body {
     color: #c2c4cb;
     line-height: 12px;
     max-width: 90%;
+    letter-spacing: -0.08px;
 }
 
 .insight-card:first-child .card-content {
@@ -429,22 +454,13 @@ body {
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-.card-bg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+    justify-center;
 }
 
 .ask-atlas {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 2px;
     padding: 6px;
     position: relative;
 }
@@ -452,13 +468,15 @@ body {
 .search-icon {
     width: 13px;
     height: 20px;
-    margin-left: 12px;
+    margin-left: 6px;
 }
 
 .ask-atlas span {
     flex: 1;
     font-size: 16px;
-    color: rgba(243, 243, 243, 0.8);
+    color: rgba(243, 243, 243, 0.6);
+    line-height: 21px;
+    letter-spacing: -0.32px;
 }
 
 .ask-button {
@@ -471,24 +489,27 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 2px 2px 4px rgba(28, 29, 33, 0.12);
+    box-shadow: 2px 2px 4px rgba(28, 29, 33, 0.12), inset -0.4px -0.4px 1.5px rgba(28, 29, 33, 0.3);
 }
 
 .arrow-icon {
-    width: 14px;
+    width: 12px;
     height: 14px;
 }
 
-/* Portfolio Section */
+/* Portfolio Section - Exact positioning */
 .portfolio-section {
-    position: relative;
+    position: absolute;
+    top: 692px;
+    left: 20px;
+    right: 20px;
     z-index: 10;
-    padding: 20px;
 }
 
 .portfolio-cards {
     display: flex;
     gap: 12px;
+    margin-top: 8px;
 }
 
 .portfolio-card {
@@ -497,11 +518,13 @@ body {
     border-radius: 8px;
     padding: 16px;
     min-width: 0;
+    width: 185px;
+    height: 108px;
 }
 
 .card-header {
     display: flex;
-    gap: 12px;
+    gap: 16px;
     align-items: center;
     margin-bottom: 12px;
 }
@@ -522,12 +545,16 @@ body {
     font-size: 16px;
     font-weight: 700;
     color: #fbfbfb;
-    margin-bottom: 2px;
+    margin-bottom: 0;
+    line-height: 24px;
+    letter-spacing: 0.1px;
 }
 
 .company-name {
     font-size: 12px;
     color: #dadada;
+    line-height: 16px;
+    letter-spacing: 0.4px;
 }
 
 .card-footer {
@@ -540,17 +567,21 @@ body {
     font-size: 16px;
     font-weight: 700;
     color: #fbfbfb;
+    line-height: 24px;
+    letter-spacing: 0.1px;
 }
 
 .stock-change {
     display: flex;
     align-items: center;
-    gap: 2px;
+    gap: 1px;
     font-size: 12px;
 }
 
 .stock-change.positive {
     color: #14ae5c;
+    line-height: 16px;
+    letter-spacing: 0.4px;
 }
 
 .change-arrow {
@@ -592,19 +623,23 @@ body {
 .header-subtitle {
     font-size: 13px;
     color: #9698a6;
-    margin-bottom: 2px;
+    margin-bottom: 0;
+    line-height: 18px;
+    letter-spacing: -0.08px;
 }
 
 .header-title {
     font-size: 16px;
     color: #ffdb00;
     font-weight: 500;
+    line-height: 21px;
+    letter-spacing: -0.32px;
 }
 
 /* Chat Container */
 .chat-container {
     padding: 20px;
-    height: calc(844px - 54px - 72px - 56px);
+    height: calc(844px - 54px - 72px - 62px);
     overflow-y: auto;
     position: relative;
     z-index: 10;
@@ -630,6 +665,7 @@ body {
     border-radius: 20px;
     font-size: 16px;
     line-height: 21px;
+    letter-spacing: -0.32px;
 }
 
 .user-bubble {
@@ -651,6 +687,8 @@ body {
     color: #717384;
     font-size: 13px;
     margin: 8px 0;
+    line-height: 18px;
+    letter-spacing: -0.08px;
 }
 
 /* Atlas Messages */
@@ -681,6 +719,8 @@ body {
     flex: 1;
     color: rgba(222, 223, 227, 0.6);
     font-size: 16px;
+    line-height: 21px;
+    letter-spacing: -0.32px;
 }
 
 /* Loading Animation */
@@ -734,6 +774,8 @@ body {
     font-size: 17px;
     text-decoration: underline;
     text-decoration-style: dotted;
+    line-height: 22px;
+    letter-spacing: -0.41px;
 }
 
 /* Fade In/Out Animation for Loading */
@@ -767,17 +809,17 @@ body {
 /* Chat Input */
 .chat-input {
     position: absolute;
-    bottom: 0;
+    bottom: 6px;
     left: 15px;
     right: 15px;
-    height: 56px;
+    height: 50px;
     background: rgba(62, 60, 61, 0.45);
     backdrop-filter: blur(10px);
     border-radius: 22px;
     display: flex;
     align-items: center;
     padding: 6px 10px;
-    gap: 8px;
+    gap: 2px;
     z-index: 20;
 }
 
@@ -790,6 +832,8 @@ body {
     flex: 1;
     color: #eeeff1;
     font-size: 16px;
+    line-height: 21px;
+    letter-spacing: -0.32px;
 }
 
 .send-button {
@@ -802,7 +846,7 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 2px 2px 4px rgba(28, 29, 33, 0.12);
+    box-shadow: 2px 2px 4px rgba(28, 29, 33, 0.12), inset -0.4px -0.4px 1.5px rgba(28, 29, 33, 0.3);
 }
 
 .send-icon {
@@ -829,6 +873,7 @@ body {
     font-size: 16px;
     line-height: 21px;
     margin-bottom: 8px;
+    letter-spacing: -0.32px;
 }
 
 .company-tag-inline {
@@ -853,7 +898,7 @@ body {
     border-radius: 50%;
     display: flex;
     align-items: center;
-    justify-center;
+    justify-content: center;
     margin-bottom: 4px;
 }
 
@@ -874,6 +919,8 @@ body {
     color: #dedfe3;
     font-weight: 400;
     margin-bottom: 12px;
+    line-height: 22px;
+    letter-spacing: -0.306px;
 }
 
 .card-body {
@@ -884,6 +931,7 @@ body {
     font-size: 16px;
     line-height: 21px;
     margin-bottom: 12px;
+    letter-spacing: -0.32px;
 }
 
 .suggestions-list {
@@ -897,7 +945,7 @@ body {
     padding: 4px 0;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
 }
 
 .suggestions-list li::before {
@@ -912,8 +960,9 @@ body {
     font-size: 13px;
     color: #5e606e;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 458;
     letter-spacing: -0.6px;
+    line-height: 16px;
 }
 
 .suggestion-text {
@@ -921,6 +970,8 @@ body {
     text-decoration: underline;
     text-decoration-style: dotted;
     color: #eeeff1;
+    line-height: 21px;
+    letter-spacing: -0.32px;
 }
 
 .question-text {
@@ -928,6 +979,7 @@ body {
     line-height: 25px;
     color: #dedfe3;
     margin-bottom: 16px;
+    letter-spacing: -0.315px;
 }
 
 /* Action Buttons */
@@ -954,6 +1006,8 @@ body {
     font-size: 16px;
     color: #717384;
     margin-left: 4px;
+    line-height: 21px;
+    letter-spacing: -0.32px;
 }
 
 .action-btns {
