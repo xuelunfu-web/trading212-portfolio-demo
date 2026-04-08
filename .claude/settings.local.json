@@ -16,7 +16,8 @@
       "Bash(git remote:*)",
       "Bash(git push:*)",
       "Bash(git pull:*)",
-      "Bash(gh api:*)"
+      "Bash(gh api:*)",
+      "Bash(ls -la /Users/xuelunfu/sharon-codes/*.html /Users/xuelunfu/sharon-codes/*.css)"
     ]
   }
 }
