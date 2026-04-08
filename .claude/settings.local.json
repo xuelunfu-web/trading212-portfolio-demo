@@ -17,7 +17,8 @@
       "Bash(git push:*)",
       "Bash(git pull:*)",
       "Bash(gh api:*)",
-      "Bash(ls -la /Users/xuelunfu/sharon-codes/*.html /Users/xuelunfu/sharon-codes/*.css)"
+      "Bash(ls -la /Users/xuelunfu/sharon-codes/*.html /Users/xuelunfu/sharon-codes/*.css)",
+      "mcp__plugin_figma_figma__get_metadata"
     ]
   }
 }

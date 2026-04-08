@@ -243,12 +243,12 @@ body {
 /* Central Planet */
 .planet-center {
     position: absolute;
-    top: 166px;
-    left: 50%;
-    transform: translateX(-50%) rotate(-90deg);
+    top: 352px;
+    left: 99px;
     width: 186px;
     height: 186px;
     z-index: 3;
+    transform: rotate(-90deg);
     animation: gentleRotate 20s linear infinite;
 }
 
@@ -260,10 +260,10 @@ body {
 
 @keyframes gentleRotate {
     0% {
-        transform: translateX(-50%) rotate(-90deg);
+        transform: rotate(-90deg);
     }
     100% {
-        transform: translateX(-50%) rotate(270deg);
+        transform: rotate(270deg);
     }
 }
 
@@ -271,8 +271,7 @@ body {
 .score-section {
     position: absolute;
     top: 358px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 79px;
     width: 233px;
     text-align: center;
     z-index: 10;
@@ -315,13 +314,12 @@ body {
 .rebalance-button-container {
     position: absolute;
     top: 422px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 1px;
     width: 388px;
     height: 56px;
     display: flex;
     align-items: center;
-    justify-center;
+    justify-content: center;
     z-index: 10;
 }
 
