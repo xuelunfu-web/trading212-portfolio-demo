@@ -418,11 +418,15 @@ body {
     display: block;
     font-size: 10px;
     font-weight: 590;
-    color: #303030;
+    color: #9698a6;
     margin-bottom: 4px;
     line-height: 13px;
     letter-spacing: 0.07px;
     text-transform: none;
+}
+
+.insight-card:first-child .card-label {
+    color: #303030;
 }
 
 .card-content {
