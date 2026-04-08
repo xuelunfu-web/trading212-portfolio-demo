@@ -193,38 +193,6 @@ body {
     font-weight: 400;
 }
 
-.orbit {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-}
-
-.orbit-line {
-    display: block;
-}
-
-.orbit-1 {
-    width: 169px;
-    height: 169px;
-}
-
-.orbit-2 {
-    width: 270px;
-    height: 270px;
-}
-
-.orbit-3 {
-    width: 306px;
-    height: 306px;
-}
-
-.orbit-4 {
-    width: 351px;
-    height: 351px;
-}
-
 .planet-center {
     position: absolute;
     top: 50%;
