@@ -412,9 +412,7 @@ body {
 }
 
 .insight-card:first-child {
-    background-image: url('https://www.figma.com/api/mcp/asset/95ec098a-03ba-4b4b-b1d5-439dc530992c');
-    background-size: cover;
-    background-position: center;
+    background: #26262c;
 }
 
 .card-label {
