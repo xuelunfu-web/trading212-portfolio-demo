@@ -1,0 +1,170 @@
+/* Solar System Container */
+.solar-system-container {
+    position: relative;
+    width: 390px;
+    height: 250px;
+    margin-top: -30px;
+    overflow: visible;
+}
+
+/* Orbital rings structure */
+.orbit-group {
+    position: absolute;
+    pointer-events: none;
+}
+
+.orbit-outline {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Orbit Group 1 - Innermost orbit (270px diameter) */
+.orbit-group-1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 270px;
+    height: 270px;
+    transform: translate(-50%, -50%);
+}
+
+.orbit-group-1 .orbit-outline {
+    width: 100%;
+    height: 100%;
+}
+
+/* Tech 45% planet - top-left (label at 27px, 78px) */
+.orbit-group-1 .planet-1 {
+    position: absolute;
+    top: 20px;
+    left: -24px;
+    width: 26px;
+    height: 26px;
+}
+
+.orbit-group-1 .planet-1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Orbit Group 2 - Second orbit (306px diameter) */
+.orbit-group-2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 306px;
+    height: 306px;
+    transform: translate(-50%, -50%);
+}
+
+.orbit-group-2 .orbit-outline {
+    width: 100%;
+    height: 100%;
+}
+
+/* Others 17% planet - top-center (label at 140px, 132px) */
+.orbit-group-2 .planet-3 {
+    position: absolute;
+    top: -10px;
+    left: 140px;
+    width: 16px;
+    height: 16px;
+}
+
+.orbit-group-2 .planet-3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Orbit Group 3 - Third orbit (351px diameter) */
+.orbit-group-3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 351px;
+    height: 351px;
+    transform: translate(-50%, -50%);
+}
+
+.orbit-group-3 .orbit-outline {
+    width: 100%;
+    height: 100%;
+}
+
+/* Bitcoin 13% planet - top-right (label at 283px, 147px) */
+.orbit-group-3 .planet-4 {
+    position: absolute;
+    top: 5px;
+    right: -10px;
+    width: 29px;
+    height: 29px;
+}
+
+.orbit-group-3 .planet-4 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Saturn - bottom center */
+.orbit-group-3 .planet-5 {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 35px;
+}
+
+.orbit-group-3 .planet-5 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Healthcare 25% planet - bottom-right (label at 290px, 216px) */
+.orbit-group-4 .planet-6 {
+    position: absolute;
+    top: 75px;
+    right: -10px;
+    width: 31px;
+    height: 22px;
+}
+
+.orbit-group-4 .planet-6 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Additional planet on outer orbit */
+.orbit-group-1 .planet-2,
+.orbit-group-4 .planet-7 {
+    display: none; /* Hide extra planets for now */
+}
+
+/* Planet wrapper */
+.orbit-planet {
+    position: absolute;
+}
+
+.planet-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Portfolio labels */
+.portfolio-label {
+    position: absolute;
+    font-size: 10px;
+    color: white;
+    z-index: 10;
+    white-space: nowrap;
+    font-weight: 400;
+}
