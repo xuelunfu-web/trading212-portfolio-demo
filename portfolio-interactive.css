@@ -362,8 +362,9 @@ body {
     transform: translate(-50%, -50%);
     width: 386px;
     height: 589px;
-    background: radial-gradient(ellipse at center, rgba(88, 0, 230, 0.1) 0%, transparent 70%);
+    background: transparent;
     filter: blur(50px);
+    display: none;
     pointer-events: none;
     z-index: 1;
 }
@@ -863,10 +864,11 @@ body {
     transform: translateX(-50%);
     width: 390px;
     height: 585px;
-    background: radial-gradient(ellipse at center, rgba(88, 0, 230, 0.1) 0%, transparent 70%);
+    background: transparent;
     filter: blur(50px);
     pointer-events: none;
     z-index: 1;
+    display: none;
 }
 
 /* Chat Input */
