@@ -80,9 +80,10 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10.806px);
+    box-shadow: inset 12.865px -12.865px 12.865px 0px rgba(194, 194, 194, 0.03),
+                inset -12.865px 12.865px 12.865px 0px rgba(255, 255, 255, 0.03);
 }
 
 .account-details {
@@ -177,36 +178,184 @@ body {
     font-weight: 400;
 }
 
-.orbit {
+/* Orbit Groups - Exact Figma positioning */
+.orbit-group {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     pointer-events: none;
 }
 
-.orbit-line {
+.orbit-outline {
+    position: absolute;
     display: block;
+    width: 100%;
+    height: 100%;
 }
 
-.orbit-1 {
-    width: 169px;
-    height: 169px;
+/* Group 04 - Orbit 1 */
+.orbit-group-1 {
+    top: 9px;
+    right: 59.7px;
+    bottom: -48.4px;
+    left: 58px;
 }
 
-.orbit-2 {
-    width: 270px;
-    height: 270px;
+.orbit-group-1 .orbit-outline {
+    top: 19.7px;
+    right: 41.7px;
+    bottom: -56.7px;
+    left: 45.7px;
 }
 
-.orbit-3 {
-    width: 306px;
-    height: 306px;
+.orbit-group-1 .planet-1 {
+    position: absolute;
+    top: 124px;
+    right: 148.5px;
+    bottom: 90.4px;
+    left: 27.4px;
+    display: flex;
+    align-items: center;
+    justify-center;
 }
 
-.orbit-4 {
-    width: 351px;
-    height: 351px;
+.orbit-group-1 .planet-1 img {
+    transform: rotate(45.7deg);
+    width: 16px;
+    height: 16px;
+}
+
+.orbit-group-1 .planet-2 {
+    position: absolute;
+    top: 9px;
+    right: 100px;
+    bottom: 196px;
+    left: 71.5px;
+    display: flex;
+    align-items: center;
+    justify-center;
+}
+
+.orbit-group-1 .planet-2 img {
+    transform: rotate(33.29deg);
+    width: 18px;
+    height: 18px;
+}
+
+/* Group 05 - Orbit 2 */
+.orbit-group-2 {
+    top: -6.7px;
+    right: 42.4px;
+    bottom: -67.9px;
+    left: 40px;
+}
+
+.orbit-group-2 .orbit-outline {
+    inset: 0;
+}
+
+.orbit-group-2 .planet-3 {
+    position: absolute;
+    top: 43px;
+    right: 63.5px;
+    bottom: 244.8px;
+    left: 231.6px;
+    display: flex;
+    align-items: center;
+    justify-center;
+}
+
+.orbit-group-2 .planet-3 img {
+    transform: rotate(72.92deg);
+    width: 14px;
+    height: 14px;
+}
+
+/* Group 06 - Orbit 3 */
+.orbit-group-3 {
+    top: -28.9px;
+    right: 23.4px;
+    bottom: -90.7px;
+    left: 14px;
+}
+
+.orbit-group-3 .orbit-outline {
+    inset: 0;
+}
+
+.orbit-group-3 .planet-4 {
+    position: absolute;
+    top: 132px;
+    right: 47.9px;
+    bottom: 174.3px;
+    left: 276.2px;
+    display: flex;
+    align-items: center;
+    justify-center;
+}
+
+.orbit-group-3 .planet-4 img {
+    transform: rotate(114.54deg);
+    width: 16px;
+    height: 16px;
+}
+
+.orbit-group-3 .planet-5 {
+    position: absolute;
+    top: 434.8px;
+    right: 242.9px;
+    bottom: -118.2px;
+    left: 79.8px;
+}
+
+.orbit-group-3 .planet-5 img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Group 07 - Orbit 4 (no outline, just planets) */
+.orbit-group-4 .planet-6 {
+    position: absolute;
+    top: 19.5px;
+    right: 149.4px;
+    bottom: 164.6px;
+    left: 25.7px;
+    display: flex;
+    align-items: center;
+    justify-center;
+}
+
+.orbit-group-4 .planet-6 img {
+    transform: rotate(80.9deg);
+    width: 12px;
+    height: 12px;
+}
+
+.orbit-group-4 .planet-7 {
+    position: absolute;
+    top: 234.5px;
+    right: 2.7px;
+    bottom: -42.5px;
+    left: 346.4px;
+    display: flex;
+    align-items: center;
+    justify-center;
+}
+
+.orbit-group-4 .planet-7 img {
+    transform: rotate(74.78deg);
+    width: 12px;
+    height: 12px;
+}
+
+/* Planet images */
+.orbit-planet {
+    position: absolute;
+}
+
+.planet-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 .planet-center {
@@ -256,7 +405,7 @@ body {
     transform: translateX(-50%);
     width: 386px;
     height: 589px;
-    background: radial-gradient(ellipse at center, rgba(88, 0, 230, 0.6) 0%, transparent 70%);
+    background: radial-gradient(ellipse at center, rgba(88, 0, 230, 0.1) 0%, transparent 70%);
     filter: blur(50px);
     pointer-events: none;
     z-index: 1;
@@ -455,7 +604,8 @@ body {
 .portfolio-card {
     flex: 1;
     background: #26262c;
-    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 22px;
     padding: 16px;
     min-width: 0;
 }
